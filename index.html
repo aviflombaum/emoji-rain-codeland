@@ -2,76 +2,72 @@
 <html>
 <head>
   <title>Emoji Rain</title>
-  <script>
-
-    function moveEmoji(emoji, top) {
-      setTimeout(function(){
-        emoji.style.top = top + "px";
-        top += 2
-        if (top < window.innerHeight){
-          moveEmoji(emoji, top)
-        } else {
-          moveEmoji(emoji, 1)
-        }
-      }, 20)
-    }
-
-    function makeItRain(){
-      emojis = document.querySelectorAll(".emoji");
-      emojis.forEach(function(emoji){
-        moveEmoji(emoji, 20)
-      })
-    }
-
-    document.addEventListener("DOMContentLoaded", makeItRain)
-
-  </script>
-
   <style>
-    div.emoji {
-      font-size: 24px;
-      position: relative;
-      float: left;
-    }
-  </style>
+  span {
+    font-size: 350%;
+    position: relative;
+  }
+</style>
 </head>
 
 <body>
-  <div class="emoji">
-    😍
-  </div>
-  <div class="emoji">
-    💧
-  </div>
-  <div class="emoji">
-    😎
-  </div>
-  <div class="emoji">
-    💧
-  </div>
-  <div class="emoji">
-    💥
-  </div>
-  <div class="emoji">
-    💧
-  </div>
-  <div class="emoji">
-    🐻
-  </div>
-  <div class="emoji">
-    💧
-  </div>
-  <div class="emoji">
-    🐏
-  </div>
-  <div class="emoji">
-    💧
-  </div>
-  <div class="emoji">
-    🌏
-  </div>
-  <div class="emoji">
-    💧
-  </div>
+
+  <span>💗</span>  
+  <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
+  <span>💗</span>  
+  <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
+  <span>💗</span>  
+  <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
+
 </body>
+
+<script>
+  function moveEmoji(emoji, currentPosition){
+    setTimeout(function(){ 
+      emoji.style.top = currentPosition + "px";
+
+      currentPosition = currentPosition + Math.floor(Math.random() * dropDownHeight);
+
+      if (currentPosition > window.innerHeight){
+        moveEmoji(emoji, 0)        
+      } else { 
+        moveEmoji(emoji, currentPosition)
+      }
+
+    }, rainSpeed)
+                
+  }
+
+  let currentPosition = 0;
+  let rainSpeed = 5;
+  let dropDownHeight = 5
+
+  let emojis = document.querySelectorAll("span")
+
+  emojis.forEach(function(emoji){
+    moveEmoji(emoji, currentPosition)
+  })
+</script>        
+
 </html>
