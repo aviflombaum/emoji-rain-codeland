@@ -1,73 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Emoji Rain</title>
+
   <style>
-  span {
-    font-size: 350%;
-    position: relative;
-  }
-</style>
+
+  </style>
+
 </head>
 
 <body>
 
-  <span>💗</span>  
-  <span>❤️</span>
-  <span>🧡</span>
-  <span>💛</span>
-  <span>💚</span>
-  <span>💙</span>
-  <span>💜</span>
-  <span>🖤</span>
-  <span>💗</span>
-  <span>💗</span>  
-  <span>❤️</span>
-  <span>🧡</span>
-  <span>💛</span>
-  <span>💚</span>
-  <span>💙</span>
-  <span>💜</span>
-  <span>🖤</span>
-  <span>💗</span>
-  <span>💗</span>  
-  <span>❤️</span>
-  <span>🧡</span>
-  <span>💛</span>
-  <span>💚</span>
-  <span>💙</span>
-  <span>💜</span>
-  <span>🖤</span>
-  <span>💗</span>
-
 </body>
 
 <script>
-  function moveEmoji(emoji, currentPosition){
-    setTimeout(function(){ 
-      emoji.style.top = currentPosition + "px";
 
-      currentPosition = currentPosition + Math.floor(Math.random() * dropDownHeight);
-
-      if (currentPosition > window.innerHeight){
-        moveEmoji(emoji, 0)        
-      } else { 
-        moveEmoji(emoji, currentPosition)
-      }
-
-    }, rainSpeed)
-                
-  }
-
-  let currentPosition = 0;
-  let rainSpeed = 5;
-  let dropDownHeight = 5
-
-  let emojis = document.querySelectorAll("span")
-
-  emojis.forEach(function(emoji){
-    moveEmoji(emoji, currentPosition)
-  })
 </script>        
 
 </html>
