@@ -35,3 +35,7 @@ Call `moveEmoji` recursively from within `moveEmoji` to create a loop that will 
 ## [Chapter 9: Restart the drop from the top of the screen](https://glitch.com/edit/#!/remix/emoji-rain-9)
 
 Check the position of the emoji and move it back to the top if it is going to drop below the page fold.
+
+## [Chapter 10: Customize your application](https://glitch.com/edit/#!/remix/emoji-rain-10)
+
+Change the emojis, change the page background, do whatever you want, the project is yours!
