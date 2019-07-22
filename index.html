@@ -20,8 +20,13 @@
 
 <script>
   // This is where we put our Javascript, the code that makes the site interactive
-  let emoji = document.querySelector("span")
-  emoji.style.top = "10px"
+  function moveEmoji(emoji){
+    emoji.style.top = "10px"  
+  }
+
+  let firstEmoji = document.querySelector("span")
+  moveEmoji(firstEmoji)
+  
 </script>        
 
 </html>
