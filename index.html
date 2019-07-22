@@ -51,7 +51,12 @@
       let originalPosition = parseInt(emoji.style.top) || 1
       let newPosition = originalPosition + Math.floor(Math.random() * 5)
 
-      emoji.style.top = newPosition + "px";
+      if (newPosition > window.innerHeight){
+        emoji.style.top = "1px";
+      } else {
+        emoji.style.top = newPosition + "px";
+      }
+
       moveEmoji(emoji)
     }, 5)
   }
