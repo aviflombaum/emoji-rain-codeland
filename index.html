@@ -15,7 +15,33 @@
   <!-- Add Your Emoji Below, You Can Copy One From Below -->
   <!-- ❤️💗🧡💛💚💙💜🖤 -->
   <!-- Put an Emoji within a <span> </span> Tag -->
+  <span>💗</span>  
   <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
+  <span>💗</span>  
+  <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
+  <span>💗</span>  
+  <span>❤️</span>
+  <span>🧡</span>
+  <span>💛</span>
+  <span>💚</span>
+  <span>💙</span>
+  <span>💜</span>
+  <span>🖤</span>
+  <span>💗</span>
 </body>
 
 <script>
@@ -24,8 +50,11 @@
     emoji.style.top = "10px"  
   }
 
-  let firstEmoji = document.querySelector("span")
-  moveEmoji(firstEmoji)
+  let emojis = document.querySelectorAll("span")
+
+  emojis.forEach(function(emoji){
+    moveEmoji(emoji)
+  })
   
 </script>        
 
