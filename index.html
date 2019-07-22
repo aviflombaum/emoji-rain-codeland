@@ -47,10 +47,12 @@
 <script>
   // This is where we put our Javascript, the code that makes the site interactive
   function moveEmoji(emoji){
-    let originalPosition = parseInt(emoji.style.top) || 1
-    let newPosition = originalPosition + Math.floor(Math.random() * 5)
-    
-    emoji.style.top = newPosition + "px";
+    setTimeout(function(){ 
+      let originalPosition = parseInt(emoji.style.top) || 1
+      let newPosition = originalPosition + Math.floor(Math.random() * 5)
+
+      emoji.style.top = newPosition + "px";
+    }, 5)
   }
 
   let emojis = document.querySelectorAll("span")
